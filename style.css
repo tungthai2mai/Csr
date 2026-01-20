@@ -1,0 +1,91 @@
+/* 1. Selector BODY: Thiết lập font chữ và màu nền chung */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Yêu cầu về font-family */
+    background-color: #f4f4f4; /* Màu nền nhẹ cho toàn trang */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Selector HEADER: Chứa tiêu đề chính */
+header {
+    background-color: #333; /* Màu nền tối cho header */
+    color: white; /* Chữ màu trắng */
+    padding: 20px;
+    text-align: center; /* Căn giữa nội dung header */
+}
+
+/* Selector H1: Yêu cầu thay đổi font size và căn giữa */
+h1 {
+    font-size: 250%; /* Tăng kích thước font */
+    text-align: center; /* Căn giữa theo yêu cầu */
+    font-family: 'Georgia', serif; /* Đổi font khác biệt cho tiêu đề */
+    margin: 0;
+}
+
+/* 3. Selector NAV: Phần menu điều hướng */
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+    padding: 0;
+    margin: 0;
+}
+
+/* Yêu cầu: Làm cho các link nằm ngang hàng (thay vì dọc) */
+nav li {
+    display: inline-block; /* Property quan trọng để dàn hàng ngang */
+    margin: 0 15px; /* Khoảng cách giữa các link */
+}
+
+
+
+nav a {
+    color: white; /* Màu chữ link */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Hiệu ứng khi di chuột vào link (Optional - làm cho đẹp hơn) */
+nav a:hover {
+    color: #ffd700; 
+}
+
+/* 4. Selector MAIN: Phần nội dung chính */
+main {
+    background-color: #ffffcc; /* Yêu cầu: "yellow color for background of main" */
+    width: 80%; /* Giới hạn chiều rộng */
+    margin: 20px auto; /* Căn giữa main trong body */
+    padding: 20px;
+    border: 1px solid #ccc;
+    min-height: 400px;
+}
+
+/* Selector P: Định dạng đoạn văn */
+p {
+    line-height: 1.6; /* Yêu cầu về line-height (khoảng cách dòng) */
+    color: #333; /* Màu chữ */
+    font-size: 110%;
+}
+
+/* Định dạng ảnh để không bị quá to */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 5px solid white; /* Thêm khung ảnh cho đẹp */
+}
+
+/* 5. Selector FOOTER: Chân trang */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+    margin-top: 20px;
+}
