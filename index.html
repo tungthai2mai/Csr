@@ -3,34 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Lens - Home</title>
+    <title>Interactive Accessible Photo Gallery</title>
     <link rel="stylesheet" href="style.css">
+    <script src="gallery.js"></script>
 </head>
-<body>
-    <a href="#main" class="skip-link">Skip to Main Content</a>
+<body onload="initializeGallery()">
 
     <header>
-        <h1>Lumina Lens Photography</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About/Contact</a></li>
-            </ul>
-        </nav>
+        <h1>My Photography Portfolio</h1>
     </header>
 
-    <main id="main">
-        <section class="hero">
-            <h2>Capturing Moments, Creating Memories</h2>
-            <p>Welcome to my official portfolio. I specialize in nature, urban, and portrait photography.</p>
+    <main>
+        <h2>Gallery Thumbnails</h2>
+        <p>Hover over an image or tab to it to view the description.</p>
+
+        <div id="image-gallery">
+            <img src="https://via.placeholder.com/150/0000FF/808080?text=Nature" 
+                 alt="A serene blue nature scene" 
+                 class="preview" 
+                 onmouseover="upDate(this)" 
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+
+            <img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=City" 
+                 alt="A busy red city street" 
+                 class="preview" 
+                 onmouseover="upDate(this)" 
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+
+            <img src="https://via.placeholder.com/150/FFFF00/000000?text=Food" 
+                 alt="Delicious yellow food dish" 
+                 class="preview" 
+                 onmouseover="upDate(this)" 
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
             
-            <img src="https://picsum.photos/id/1011/600/400" alt="A woman canoeing on a calm lake at sunset" class="styled-img">
-        </section>
+            <img src="https://via.placeholder.com/150/008000/FFFFFF?text=Forest" 
+                 alt="Green forest canopy" 
+                 class="preview" 
+                 onmouseover="upDate(this)" 
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+
+            <img src="https://via.placeholder.com/150/FFA500/000000?text=Sunset" 
+                 alt="Orange sunset over water" 
+                 class="preview" 
+                 onmouseover="upDate(this)" 
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+
+            <img src="https://via.placeholder.com/150/800080/FFFFFF?text=Night" 
+                 alt="Purple night sky with stars" 
+                 class="preview" 
+                 onmouseover="upDate(this)" 
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+        </div>
+
+        <div id="image" class="display-box">
+            Hover over or tab to an image below to display here.
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Lumina Lens. All rights reserved.</p>
-    </footer>
 </body>
 </html>
