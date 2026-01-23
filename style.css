@@ -1,125 +1,40 @@
-/* General Page Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-header, footer {
-    background-color: #2c3e50;
-    color: #fff;
+    font-family: Arial, sans-serif;
     text-align: center;
-    padding: 1rem;
+    background-color: #f0f0f0;
 }
 
-main {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+h1 { color: #333; }
+h2 { color: #555; }
+
+.preview {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #ccc;
+    margin: 10px;
+    border-radius: 5px;
+    /* Smooth transition for effects */
+    transition: all 0.3s ease; 
 }
 
-/* --- REQUIREMENT: Skip to Main Content Link --- */
-/* Positioned off-screen by default, moves on screen when focused */
-.skip-link {
-    position: absolute;
-    top: -999px;
-    left: -999px;
-    background: #000;
-    color: #fff;
-    padding: 10px 20px;
-    z-index: 100;
-    text-decoration: none;
+/* Accessibility: Visual cue for keyboard focus and mouse hover */
+.preview:hover, .preview:focus {
+    border-color: blue;
+    transform: scale(1.05);
+    /* Removes default outline and adds our own custom style */
+    outline: 2px solid blue; 
 }
 
-/* Requirement: Only visible on focus */
-.skip-link:focus {
-    top: 10px;
-    left: 10px;
-}
-
-/* --- REQUIREMENT: Navigation using Flex & Styling --- */
-nav ul {
-    /* Requirement: Flex Property */
-    display: flex; 
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding-bottom: 5px;
-    /* Requirement: Attractive styling (border, color, font) */
-    border-bottom: 2px solid transparent; 
-    transition: all 0.3s ease;
-}
-
-/* --- REQUIREMENT: Hover Pseudo-class --- */
-nav a:hover {
-    color: #ffca28; /* Yellow accent */
-    border-bottom: 2px solid #ffca28;
-}
-
-.active {
-    border-bottom: 2px solid #fff;
-}
-
-/* --- REQUIREMENT: Images Styled with Box Model --- */
-/* Applies Border, Padding, and Border-Radius */
-.styled-img, .gallery-img {
-    background-color: #fff;
-    padding: 10px;              /* Box Model: Padding */
-    border: 1px solid #ddd;     /* Box Model: Border */
-    border-radius: 8px;         /* Box Model: Radius */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    max-width: 100%;
-    height: auto;
-}
-
-/* --- REQUIREMENT: Grid Property (Used on Gallery Page) --- */
-.gallery-grid {
-    display: grid;
-    /* Creates responsive columns automatically */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px;
-    margin-top: 20px;
-}
-
-/* --- REQUIREMENT: Nth-child Selector --- */
-/* Every even image gets a slightly different style */
-.gallery-img:nth-child(even) {
-    border-color: #2c3e50; /* Darker border for even items */
-    transform: rotate(1deg); /* Slight artistic tilt */
-}
-
-/* --- REQUIREMENT: Flex Property (Used on About Page Content) --- */
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.flex-item {
-    flex: 1 1 300px; /* Flex-grow, Flex-shrink, Basis */
-}
-
-.text-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.display-box {
+    width: 400px;
+    height: 400px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+    border: 5px solid black;
+    line-height: 400px; /* Vertically center default text */
+    font-size: 20px;
+    color: #333;
 }
